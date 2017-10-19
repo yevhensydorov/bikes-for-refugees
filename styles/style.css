@@ -49,23 +49,24 @@ h2:before {
 
 /* hidden toggle-icon */
 .toggle-icon {
-  display: none;
-  float: right;
-  background: transparent;
-  border: 1px solid #DDDDDC;
-  border-radius: 7px;
-  margin: 6px 5px 0 0;
-  cursor: pointer;
+	display: none;
+	background: transparent;
+	border: 1px solid #DDDDDC;
+	border-radius: 7px;
+	margin: 6px 5px 0 0;
+	cursor: pointer;
 }
+
 .toggle-icon:focus {
-  outline: none;
+	outline: none;
 }
 
 .toggle-icon:hover .lines {
-  background: #DDDDDC;
+	background: #DDDDDC;
 }
+
 .toggle-icon:hover {
-  border: 1px solid #DDDDDC;
+	border: 1px solid #DDDDDC;
 }
 
 .lines {
@@ -108,11 +109,16 @@ h2:before {
 }
 
 @media (min-width: 320px) {
-	.nav-menu {
+	.main-nav {
 		display: none;
 	}
 
+	.main-header {
+		
+	}
+
 	.toggle-icon {
+		position: relative;
 		display: flex;
 		-webkit-flex-direction: column;
 		-moz-flex-direction: column;
@@ -122,39 +128,52 @@ h2:before {
 	}
 
 	.main-nav > li {
-    float: none;
-    height: 40px;
-    width: 99.9%;
-  }
-  .main-nav > li a {
-    float: none;
-    display: inline-block;
-    height: 40px;
-    width: 99.9%;
-    border-bottom: .5px solid rgba(255, 255, 255, .2);
-  }
-  .responsive-ul {
-  display: flex;
-  -webkit-flex-direction: column;
-  -moz-flex-direction: column;
-  -ms-flex-direction: column;
-  -o-flex-direction: column;
-  flex-direction: column;
-  }
-/*  .responsive-nav-height {
-    height: 172px;
-  }*/
-  nav,.responsive-ul {
-  transition:all 300ms linear;
-  }
+		height: 40px;
+		width: 99.9%;
+	}
+
+	.main-nav > li a {
+		display: inline-block;
+		height: 40px;
+		width: 99.9%;
+		border-bottom: .5px solid rgba(255, 255, 255, .2);
+	}
+
+	.responsive-ul {
+		position: absolute;
+		left: 100%;
+		display: flex;
+		-webkit-flex-direction: column;
+		-moz-flex-direction: column;
+		-ms-flex-direction: column;
+		-o-flex-direction: column;
+		flex-direction: column;
+	}
+
+	nav,
+	.responsive-ul {
+		transition:all 300ms linear;
+	}
+
+	.main-header a.btn {
+		display: none;
+	}
 }
 
 @media (min-width: 992px) {
-	.nav-menu {
+	.main-nav {
 		display: -webkit-flex;
 		display: -moz-flex;
 		display: -ms-flex;
 		display: -o-flex;
+		display: flex;
+	}
+
+	.toggle-icon {
+		display: none;
+	}
+
+	.main-header a.btn {
 		display: flex;
 	}
 }
