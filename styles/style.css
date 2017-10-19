@@ -109,13 +109,9 @@ h2:before {
 }
 
 @media (min-width: 320px) {
-	.main-nav {
+/*	.main-nav {
 		display: none;
-	}
-
-	.main-header {
-		
-	}
+	}*/
 
 	.toggle-icon {
 		position: relative;
@@ -148,11 +144,6 @@ h2:before {
 		-ms-flex-direction: column;
 		-o-flex-direction: column;
 		flex-direction: column;
-	}
-
-	nav,
-	.responsive-ul {
-		transition:all 300ms linear;
 	}
 
 	.main-header a.btn {
